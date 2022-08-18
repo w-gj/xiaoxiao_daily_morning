@@ -35,11 +35,11 @@ def get_birthday():
   return (next - today).days - 1
 
 def get_words():
-  words = requests.get("https://cloud.qqshabi.cn/api/tiangou/api.php")
+  words = requests.get("https://api.shadiao.pro/du")
   if words.status_code != 200:
     return get_words()
-#  return words.json()['data']['text']
-  return words
+  return words.json()['data']['text']
+
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)

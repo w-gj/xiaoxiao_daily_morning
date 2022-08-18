@@ -39,7 +39,7 @@ def get_words():
   if words.status_code != 200:
     return get_words()
 #  return words.json()['data']['text']
-  return words.json()
+  return words
 
 def get_random_color():
   return "#%06x" % random.randint(0, 0xFFFFFF)

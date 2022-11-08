@@ -55,7 +55,7 @@ def get_memorial_days_count():
     print('没有设置 START_DATE')
     return 0
   delta = today - datetime.strptime(start_date, "%Y-%m-%d")
-  return delta.days + 1 
+  return delta.days
 
 # 生日倒计时
 def get_birthday_left():
@@ -65,7 +65,7 @@ def get_birthday_left():
   next = datetime.strptime(str(today.year) + "-" + birthday, "%Y-%m-%d")
   if next < nowtime:
     next = next.replace(year=next.year + 1)
-  return (next - today).days - 1
+  return (next - today).days
 
 # 彩虹屁 接口不稳定，所以失败的话会重新调用，直到成功
 def get_words():
